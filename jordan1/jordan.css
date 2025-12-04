@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik+Wet+Paint&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+}
+
+.logo{ 
+  width:100px;
+}
+
+body {
+  background: var(--mainColor);
+  transition: .5s;
+}
+
+.hero{
+  position:relative;
+  padding:60px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:80vh;
+  transition:0.5s;
+}
+
+.bg-text{
+  font-family: "Rubik Wet Paint", system-ui;
+  position:absolute;
+  font-size:350px;
+  letter-spacing:20px;
+  z-index:0;
+  user-select:none;
+  color: white;
+  margin-bottom: 100px;
+  transform: rotate(-20deg);
+}
+
+.shoe-box{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.shoe-img{
+  width:650px;  animation: swapUp 0.6s ease-out forwards;
+  filter:drop-shadow(0 20px 15px rgba(0,0,0,0.4));
+  animation: swapUp 1s ease-out forwards;
+}
+
+@keyframes swapUp {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* LEFT INFO */
+.left-info{
+  position:absolute;
+  left:60px;
+  max-width:270px;
+}
+
+h2 {
+  font-family: "Tomorrow", sans-serif;
+}
+
+p {
+  margin-top: 10px;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.select{
+  margin-top: 30px;
+  font-family: "Chakra Petch", sans-serif;
+}
+/* Sizes */
+.size-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  gap: 10px; /* jarak antar kotak */
+  max-width: 180px; /* biar tidak melebar */
+}
+
+.size-list button{
+  background:none;
+  border:1px solid white;
+  padding:10px 14px;
+  margin:5px;
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+  border-radius:8px;
+}
+.size-list button:hover{
+  background:white;
+  color:black;
+}
+
+.color {
+  font-family: "Chakra Petch", sans-serif;
+  margin-top: 20px
+}
+
+/* Colors */
+.color-list span{
+  width:22px;
+  height:22px;
+  display:inline-block;
+  border-radius:50%;
+  margin-right:10px;
+  cursor:pointer;
+  border:2px solid white;
+}
+
+.red{ background:#ff0000; }
+.blue{ background:#0057ff; }
+.gold{ background:#e9c649ff; }
+.purple{ background:#7103fb; }
+
+/* RIGHT INFO */
+.right-info{
+  position:absolute;
+  right: 40px;
+  bottom: 100px;
+  max-width: 260px;
+  font-size: 20px;
+}
+
+.desc {
+  font-family: "Chakra Petch", sans-serif;
+  margin-top: 380px;
+
+  background: rgba(255,255,255,0.12);
+  padding: 18px 22px;
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+
+.arrow-btn {
+  width: 90px;
+  height: 90px;
+  border: 4px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow-btn img {
+  width: 40px;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Posisi kiri */
+.left-arrow {
+  left: 300px;
+  top: 45%;
+}
+
+/* Posisi kanan */
+.right-arrow {
+  right: 300px;
+  top: 45%;
+}
+
+.color-btn.active {
+  border: 3px solid #fff;
+  transform: scale(1.2);
+}
+
+/* TOMBOL KEMBALI – gaya premium kaca (glassmorphism) */
+.back-btn {
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 22px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.back-btn:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.18);
+}
+
+.back-btn .back-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1.2);
+}
+
+
+
+/* TOMBOL BELI SEKARANG – gaya tombol e-commerce premium */
+.buy-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 100px;
+  font-family: "Chakra Petch", sans-serif;
+
+  padding: 15px 26px;
+  background: linear-gradient(135deg, #ff3b3b, #b30000);
+
+  color: white;
+  font-size: 19px;
+  font-weight: 700;
+  border-radius: 14px;
+
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+
+  transition: 0.25s ease;
+}
+
+.buy-btn:hover {
+  transform: translateY(-5px) scale(1.04);
+  background: linear-gradient(135deg, #ff5252, #cc0000);
+}
+
+.price-tag {
+  position: fixed;
+  bottom: 110px;
+  right: 100px;
+  font-family: "Tomorrow", sans-serif;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  padding: 6px 0;
+  border-radius: 10px;
+
+  /* tanpa background → clean premium */
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+}
+
+/* RESPONSIVE DESIGN UNTUK 600px DAN LEBIH KECIL - PERBAIKAN */
+@media screen and (max-width: 600px) {
+  /* Layout umum */
+
+  /* Navbar */
+  .navbar {
+    padding: 15px 20px;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+  
+  /* Hero section - ubah jadi kolom */
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    margin-top: 60px; /* Tambah margin untuk tombol kembali */
+    margin-bottom: 100px;
+  }
+  
+  /* Background text */
+  .bg-text {
+    font-size: 120px;
+    letter-spacing: 8px;
+    top: 40px;
+    transform: rotate(-10deg);
+    margin-bottom: 0;
+    margin-top: 50px
+  }
+  
+  /* Sepatu */
+  .shoe-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    order: 1;
+    margin: 40px 0 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .shoe-img {
+    width: 85%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  /* Info kiri */
+  .left-info {
+    position: static;
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  
+  #shoe-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  /* Size buttons */
+  .size-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .size-list button {
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* Color selector */
+  .color {
+    margin-top: 15px;
+  }
+  
+  .color-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .color-list span {
+    width: 28px;
+    height: 28px;
+    margin: 0 8px;
+  }
+  
+  /* Info kanan */
+  .right-info {
+    position: static;
+    order: 3;
+    max-width: 100%;
+    margin: 25px 0 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .desc {
+    margin-top: 0;
+    font-size: 15px;
+    padding: 15px;
+    line-height: 1.5;
+  }
+  
+  /* Tombol panah - sembunyikan di mobile */
+  .arrow-btn {
+    display: none;
+  }
+  
+  /* PERBAIKAN: TOMBOL KEMBALI TIDAK IKUT SCROLL */
+  
+  /* Tombol kembali - absolute, bukan fixed */
+  .back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 50px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 1000;
+  }
+  
+  /* Beri padding top pada body agar konten tidak tertutup */
+  body {
+    padding-top: 60px;
+  }
+  
+  .back-btn .back-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  /* Price tag - tetap fixed agar selalu terlihat */
+  .price-tag {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    bottom: auto;
+    font-size: 18px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 6px 12px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+  }
+  
+  /* Tombol beli - tetap fixed di bawah */
+  .buy-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    left: auto;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 16px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Hapus hover effect berlebihan di mobile */
+  .buy-btn:hover {
+    transform: translateX(50%) translateY(-2px);
+  }
+  
+  .back-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Pastikan konten utama ada di bawah tombol kembali */
+  .navbar {
+    min-height: 50px; /* Beri ruang untuk tombol kembali */
+  }
+}
+
+.active-size {
+  background: white !important;
+  color: black !important;
+}

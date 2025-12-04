@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toko Sepatu</title>
+  <link rel="stylesheet" href="desain.css">
+</head>
+<body>
+  <!--banner spesial-->
+  <section class="hero">
+    <div class="banner">
+      <p class="promo">Promo</p>
+      <h1>Nike Air<br>Force 1 `07</h1>
+      <button class="check" onclick="window.location.href='Airforce1/desain.html'">Lihat</button>
+    </div>
+    <div class="gambar">
+      <img src="sepatu/sefatu.png" alt="  ">
+    </div>
+  </section>
+
+  <!--background-->
+<section class="background1">
+  <img src="background1.png" class="bg1 scroll-animate">
+
+
+  <div class="desk">
+      <h2 class="h2-animate">DESKRIPSI</h2>
+      <h3 class="h3-animate">
+        Beryl Store adalah toko sepatu yang menghadirkan berbagai pilihan model berkualitas untuk segala kebutuhan Anda. 
+        Kami menyediakan sepatu casual, olahraga, formal, hingga fashion kekinian dengan harga terjangkau dan kualitas terbaik.
+        Dengan bahan yang nyaman, desain modern, serta pelayanan ramah, kami hadir untuk memastikan setiap langkah Anda lebih percaya diri.
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+  <!--logo switch icon-->
+  <section class="app">
+    <div class="app-menu">
+      <div class="brand active">
+        <img src="logo/nike.png" alt="Nike">
+        <span>Nike</span>
+      </div>
+      <div class="brand">
+        <img src="logo/puma.png" alt="Puma">
+        <span>Puma</span>
+      </div>
+      <div class="brand">
+        <img src="logo/adidas.png" alt="Adidas">
+        <span>Adidas</span>
+      </div>
+    </div>
+  </section>
+  <section class="product-section" id="product-section"> <!-- masuk ke javascript-->
+  </section>
+
+  <!--produk di jvscript-->
+  <script src="produk.js"></script>
+
+
+<section class="background2">
+  <img src="background2.png">
+  <img src="background3.png">
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-section">
+      <h4>TUJUAN</h4>
+      <p>Kami membuat sepatu untuk mereka yang berani, mereka yang bergerak cepat, berpikir lebih cepat, dan tidak pernah menyerah.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>NAVIGATION</h4>
+      <ul>
+        <li>Home</li>
+        <li>Pages</li>
+        <li>About Us</li>
+        <li>Collections</li>
+        <li>404</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>QUICK LINKS</h4>
+      <ul>
+        <li>Contact Us</li>
+        <li>FAQ</li>
+        <li>Gallery</li>
+        <li>Articles</li>
+        <li>Single Blog</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li>+62 897-3464-572</li>
+        <li>Kediri, Indonesia</li>
+        <li>beryldum123@gmail.com</li>
+      </ul>
+      <div class="social-icons">
+        <span>●</span>
+        <span>●</span>
+        <span>●</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+        // Masuk layar → animasi muncul
+        entry.target.classList.add("show");
+      } else {
+        // Keluar layar → reset animasi agar bisa muncul lagi
+        entry.target.classList.remove("show");
+      }
+
+    });
+  }, { threshold: 0.2 });
+
+document.querySelectorAll(
+  ".scroll-animate, .animate-left, .animate-right, .bg1, .h2-animate, .h3-animate"
+).forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
+
