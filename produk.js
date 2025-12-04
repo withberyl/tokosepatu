@@ -10,7 +10,7 @@ const products = {
       img: "sepatu/NikeAirForce.png", 
       link: 'AirForce1/desain.html' 
     },
-    { name: "Jordan 1 High", price: "3.000.000", img: "sepatu/Jordan.png", link: 'jordan1/desain.html' },
+    { name: "Jordan 1 High", price: "3.000.000", img: "sepatu/jordan.png", link: 'jordan1/desain.html' },
     { name: "Nike Vomero Premium", price: "3.399.000", img: "sepatu/NikeVomeroPremium.png", link: 'vomeropremium/desain.html' },
   ],
   puma: [
